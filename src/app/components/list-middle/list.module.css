@@ -1,0 +1,143 @@
+.list {
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.item {
+    width: calc((100% - 60px) / 3);
+    border-radius: 20px;
+    padding: 30px 19px;
+    background: linear-gradient(90deg, #FBFDFF 0%, #D8EFFF 100.86%);
+    box-shadow: 0px 0px 25px 0px rgba(142, 160, 173, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.item:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -58px;
+    display: block;
+    width: 104%;
+    height: 54px;
+    background: url("/assets/pattern.svg") center center / contain no-repeat;
+}
+.item:nth-child(2):after {
+    left: 53%;
+}
+.item:last-child:after {
+    display: none;
+}
+
+.header {
+    max-width: 178px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 35px;
+}
+
+.img {
+    margin-right: 49px;
+}
+.numb {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #FDD966 0%, #BCD77E 68.54%);
+}
+
+.name {
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.desc {
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+@media (max-width: 1240px) {
+    .list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .item {
+        width: calc(50% - 15px);
+    }
+
+    .item:after {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding-bottom: 24px;
+        max-width: 140px;
+    }
+
+    .list {
+        margin-bottom: 40px;
+    }
+
+    .numb {
+        width: 60px;
+        height: 60px;
+        font-size: 36px;
+    }
+
+    .img {
+        margin-right: 0;
+        max-width: 100px;
+    }
+
+    .img img {
+        width: 100%;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .desc {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 830px ) {
+    .list {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 550px ) {
+    .item {
+        width: 100%;
+        max-width: 320px;
+    }
+}

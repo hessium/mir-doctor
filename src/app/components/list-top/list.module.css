@@ -1,0 +1,12 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+    margin-bottom: 110px;
+}
+
+@media (max-width: 1024px) {
+    .list {
+        margin-bottom: 40px;
+    }
+}
